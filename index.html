@@ -30,17 +30,28 @@
             background-color: #444;
             padding: 0.5em;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
-            margin: 0 1em;
+            margin: 0.5em;
             text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #555;
         }
         /* Product grid styles */
         .products {
             display: flex;
             flex-wrap: wrap;
             gap: 1em;
+            justify-content: center;
         }
         .product {
             background: white;
@@ -72,13 +83,16 @@
         }
 
         /* Media queries for responsiveness */
-        @media (max-width: 1024px) {
-            .product {
-                flex: 1 1 calc(50% - 2em);
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5em 0;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             .product {
                 flex: 1 1 calc(100% - 2em);
             }
