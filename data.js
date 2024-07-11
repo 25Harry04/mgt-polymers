@@ -18,6 +18,3 @@ const products = [
     }
     // Add more products as needed
 ];
-
-// Export the products array to make it accessible from other files
-export default products;
